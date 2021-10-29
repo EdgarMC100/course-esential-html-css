@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Course esential of HTML and CSS</title>
-  <link rel="stylesheet" href="./css/style-physical.css">
+  <link rel="stylesheet" href="./css/style-a.css">
   <script defer src="main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,13 +98,13 @@
             level 2 you'l learn of components and the level 3 about layouts.</p>
           <hr>
           <h2>Setup</h2>
-          <img alt="google chrome logo" id="google-chrome" src="assets/images/google-chrome.png"
+          <img class="logo"alt="google chrome logo" id="google-chrome" src="assets/images/google-chrome.png"
             title="google chrome logo">
           <h3>Google Chrome</h3>
           <p>Chrome will be <b>the browser used in this course</b> by the wide support of new standars and tools of
             advanced
             development and friendly to use</p>
-          <img alt="visual studio code logo" src="assets/images/vsc.png" id="vsc" title="visual studio code logo">
+          <img class="logo"alt="visual studio code logo" src="assets/images/vsc.png" id="vsc" title="visual studio code logo">
           <h3>Visual Studio Code</h3>
           <p>Visual Studio Code is the <b>editor most popular and powerfull text editor of the market today</b>, its
             easy use
@@ -112,12 +112,12 @@
             the ability to extending it through plugins makes it the perfect complement for any programmer regardless of
             the
             language in the one that unravels.</p>
-          <img alt="figma logo" id="figma" src="assets/images/Figma.png" title="figma logo">
+          <img class="logo"alt="figma logo" id="figma" src="assets/images/Figma.png" title="figma logo">
           <h3>Figma</h3>
           <p>Figma is the tool most popular today to deliver designs to developers for their implementation for <b>its
               easy
               use</b> beacuse it can be used directly from the browser</p>
-          <img alt="figma logo" id="github" src="assets/images/github.png" title="figma logo">
+          <img class="logo"alt="figma logo" id="github" src="assets/images/github.png" title="figma logo">
           <h3>Github</h3>
           <p>Just as your friends will find you on Facebook, on Github <b>they will find you other programmers</b> from
             all over
@@ -261,8 +261,12 @@
             </p>
             <p>Suscribete a nuestro newsletter</p>
             <input type="text" required placeholder="Nombre">
-            <input type="email" required placeholder="Correo electrónico">
-            <input type="submit" value="Suscribirme">
+            <div class="email">
+              <div class="email-container">
+                <input type="email" required placeholder="Correo electrónico">
+                <input type="submit" value="Suscribirme">
+              </div>
+            </div>
           </form>
         </section>
       </div>
