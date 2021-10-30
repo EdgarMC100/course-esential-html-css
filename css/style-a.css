@@ -53,13 +53,18 @@ div.cover-page{
   background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../assets/images/patron-1.png');
 }
 
+.header .content{
+  display: none;
+  padding-left: 10px;
+}
+
 .header{
   padding-left: 10px;
-  /* width:100%; */
 }
 
 .header-content{
   margin-top: 20px;
+  margin-left: 20px;
   /* width: 100%; */
 }
 
@@ -81,11 +86,10 @@ header a:hover {
   color: var(--gray10)
 }
 
-
-
 .main-content{
-  padding: 0 10px;
+  padding: 0 20px;
 }
+
 .wrapper{
   /* border: 1px solid red; */
   max-inline-size: 903px;
@@ -113,7 +117,7 @@ nav.nemium-variants ul li a{
   border-radius: 4px;
   display: inline-block;
   padding-inline: 8px;
-  /* width: 100%; */
+  width: 75%;
   line-height: 35px;
 }
 nav.nemium-variants ul li a:hover {
@@ -192,12 +196,12 @@ h3{
 }
 
 img.logo{
-  width: 4rem;
+  width:2.75rem;
   margin: 40px 0 16px;
 }
 
 blockquote{
-  font-size: 24px;
+  font-size: 1em;
   margin: 32px 0;
   border-left: 4px solid #212121;
   padding-left: 16px ;
@@ -339,18 +343,22 @@ scroll-container{
 }
 
 .form{
-  margin-bottom: 113px;
+  margin-bottom: 40px;
+}
+
+.form p:nth-of-type(2){
+  margin-bottom: 16px;
 }
 .form input{
   border: 1px solid black;
   box-sizing: border-box;
   border-radius: 8px;
-  block-size: 48px;
+  block-size: 44px;
   font-size: 1rem;
   /* inline-size: 100%; */
   padding-block: 12px;
   padding-inline: 16px;
-  margin-block: 24px;
+  margin-bottom: 16px;
   background-color: transparent;
   border-radius: 90px;
   width: 100%;
@@ -358,6 +366,10 @@ scroll-container{
 
 .form input::-webkit-input-placeholder{
   color: var(--black);
+}
+
+.form p a{
+  color: var(--gray60);
 }
 .email{
   display: block;
@@ -378,7 +390,6 @@ scroll-container{
 .form input[type="submit"]{
   background-color: var(--black);
   color: var(--white);
-  border: 1px solid red;
   position: absolute;
   inset-inline-end: 0px;
   width: 100px;
@@ -453,6 +464,7 @@ span.social-network i:first-of-type{
 
   .header-content{
     position: relative;
+    margin-top: 64px;
   }
 
   .header .wrapper{
@@ -465,20 +477,22 @@ span.social-network i:first-of-type{
     left: -232px;
     color: var(--gray30);
     position: absolute;
-    /* padding-top: 64px; */
     line-height: 24px;
   }
 
+  .form input{
+    block-size: 44px;
+  }
   .form input[type="text"]{
     width: 280px;
+    margin-right: 16px;
   }
 
   .form input[type="email"]{
     width: 300px;
   }
-  /* .email-container{
-    width: 100%;
-  } */
+
+
   h3{
   font-size: 1.5rem;
   }
@@ -490,6 +504,9 @@ span.social-network i:first-of-type{
     font-size: 2em;
   }
 
+  blockquote{
+    font-size: 1.5em;
+  }
 }
 
 
@@ -506,4 +523,7 @@ span.social-network i:first-of-type{
     width: 300px;
   }
 
+  .form{
+    margin-bottom: 113px;
+  }
 }
