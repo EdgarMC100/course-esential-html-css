@@ -55,17 +55,11 @@ div.cover-page{
 
 .header .content{
   display: none;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 .header{
-  padding-left: 10px;
-}
-
-.header-content{
-  margin-top: 20px;
-  margin-left: 20px;
-  /* width: 100%; */
+  /* padding-left: 10px; */
 }
 
 header {
@@ -86,20 +80,14 @@ header a:hover {
   color: var(--gray10)
 }
 
-.main-content{
-  padding: 0 20px;
-}
-
 .wrapper{
-  /* border: 1px solid red; */
   max-inline-size: 903px;
   margin: auto;
-
-  /* display: grid;
-  grid-template-columns: 350px 1fr; */
-  /* margin-right: 116px; */
+  padding: 0 20px;
 }
-
+.header-content{
+  margin-top: 16px;
+}
 div.project-variants h4{
   margin-top: 0;
   font-weight: normal;
@@ -109,16 +97,16 @@ nav.nemium-variants ul{
   padding: 0;
 }
 nav.nemium-variants ul li{
-
-  height: 35px;
+  height: 40px;
 }
 
 nav.nemium-variants ul li a{
+  box-sizing: border-box;
   border-radius: 4px;
   display: inline-block;
-  padding-inline: 8px;
-  width: 75%;
-  line-height: 35px;
+  line-height: 24px;
+  padding: 8px 0 8px 8px;
+  width: 100%;
 }
 nav.nemium-variants ul li a:hover {
   cursor: pointer;
@@ -134,13 +122,10 @@ summary{
 
 details summary::marker{
   display: none;
-  /* font-size: 2em;
-  border: 0; */
 }
 
 summary{
   list-style-type: none;
-  /* list-style-image: url(../assets/images/chevron-down-solid.svg); */
 }
 
 summary:before {
@@ -150,24 +135,20 @@ summary:before {
    display: inline-block;
    padding: 0 14px 14px 0;
    margin-right: 10px;
-   /* margin: 5px; */
    transform: rotate(45deg);
 }
-/* main{
-  display: grid;
-  grid-template-columns: 350px 1fr;
-} */
+
 h1{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin: 20px 0px 16px 0px;
   font-weight: 400;
   color: var(--gray60);
 }
 
 h2{
-  font-size: 2rem;
-  /* font-weight: normal; */
+  font-size: 1.5rem;
   color: var(--gray60);
+  font-weight: normal;
 }
 
 h1 + p{
@@ -179,14 +160,9 @@ hr{
 h2:first-of-type{
   margin-bottom: 0px;
 }
-h2{
-  font-size: 2rem;
-  color: var(--gray60);
-  font-weight: normal;
-}
 
 h3{
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: normal;
   margin-top: 16px;
   margin-bottom: 24px;
@@ -242,7 +218,6 @@ pre{
 }
 .section-content h3{
   counter-increment: titleList;
-  /* padding-bottom: 4px; */
   padding-bottom: 8px;
 }
 .section-content {
@@ -263,7 +238,6 @@ pre{
   position: absolute;
   left: 0;
   bottom: 0;
-  /* margin-top: 4px; */
 }
 
 .section-content ol li{
@@ -304,7 +278,6 @@ section:nth-of-type(2n) > h3{
 section:nth-of-type(1) > h3{
   margin-top: 0;
   margin-bottom: 24px;
-  /* border: 1px solid red; */
 }
 
 scroll-container{
@@ -355,7 +328,6 @@ scroll-container{
   border-radius: 8px;
   block-size: 44px;
   font-size: 1rem;
-  /* inline-size: 100%; */
   padding-block: 12px;
   padding-inline: 16px;
   margin-bottom: 16px;
@@ -399,7 +371,6 @@ scroll-container{
 }
 
 .form p{
-  /* color: var(--white); */
   margin: 0;
 }
 
@@ -416,7 +387,7 @@ scroll-container{
 
 
 footer h2{
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 43.65px;
   margin:0;
   color: var(--white);
@@ -457,6 +428,12 @@ span.social-network i:first-of-type{
     height: 250px;
   }
 
+  h1{
+    font-size: 3.75rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
   .header{
     position:sticky;
     top: 0;
@@ -467,31 +444,19 @@ span.social-network i:first-of-type{
     margin-top: 64px;
   }
 
-  .header .wrapper{
-    background-color: #FEC62E;
+  .header .content{
+    display: block;
+    padding-left: 10px;
   }
 
   header {
     font-size: 14px;
-    width: 188px;
     left: -232px;
+    width: 188px;
     color: var(--gray30);
     position: absolute;
     line-height: 24px;
   }
-
-  .form input{
-    block-size: 44px;
-  }
-  .form input[type="text"]{
-    width: 280px;
-    margin-right: 16px;
-  }
-
-  .form input[type="email"]{
-    width: 300px;
-  }
-
 
   h3{
   font-size: 1.5rem;
@@ -517,6 +482,18 @@ span.social-network i:first-of-type{
 
   .form input[type="text"]{
     width: 280px;
+  }
+
+  .form input[type="email"]{
+    width: 300px;
+  }
+
+  .form input{
+    block-size: 44px;
+  }
+  .form input[type="text"]{
+    width: 280px;
+    margin-right: 16px;
   }
 
   .form input[type="email"]{

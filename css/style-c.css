@@ -47,18 +47,11 @@ body{
   font-style: normal;
 }
 
-div.cover-page {
-  height: 250px;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../assets/images/patron-1.png');
-}
-
 header {
   font-size: 14px;
-  width: 188px;
   color: var(--gray30);
   top: 64px;
   line-height: 24px;
-  padding-left: 10px;
 }
 
 header a {
@@ -77,27 +70,10 @@ header a:hover {
   position: relative;
 }
 
-.main{
-  /* border: 1px solid red; */
-  /* position: relative; */
-  /* background-image: url('../assets/images/patron-1.png'); */
-  /* background-color: black; */
-}
 .wrapper{
-  /* border: 1px solid red; */
   max-inline-size: 903px;
   margin: auto;
-
-  /* display: grid;
-  grid-template-columns: 350px 1fr; */
-  /* margin-right: 116px; */
-}
-
-.main-content{
-  /* background-color: white; */
-  /* border: 1px solid green; */
-  /* padding: 20px; */
-
+  padding: 0 20px;
 }
 
 .content nav{
@@ -105,23 +81,29 @@ header a:hover {
   border-left: 3px solid gray;
 }
 
+.header-content div.project-variants{
+  margin-bottom: 40px;
+}
+
 nav.nemium-variants ul{
   list-style: none;
   padding: 0;
 }
 nav.nemium-variants ul li{
-
-  height: 35px;
+  height: 40px;
 }
 
-nav.nemium-variants ul li a{
+
+div nav.nemium-variants ul li a{
+  box-sizing: border-box;
   border-radius: 4px;
   display: inline-block;
-  padding-inline: 8px;
+  line-height: 24px;
+  padding: 8px 0 8px 8px;
   width: 100%;
-  line-height: 35px;
 }
-nav.nemium-variants ul li a:hover {
+
+div nav.nemium-variants ul li a:hover {
   cursor: pointer;
   background-color: var(--black);
   color: white;
@@ -139,13 +121,10 @@ summary{
 
 details summary::marker{
   display: none;
-  /* font-size: 2em;
-  border: 0; */
 }
 
 summary{
   list-style-type: none;
-  /* list-style-image: url(../assets/images/chevron-down-solid.svg); */
 }
 
 summary:before {
@@ -155,18 +134,14 @@ summary:before {
    display: inline-block;
    padding: 0 14px 14px 0;
    margin-right: 10px;
-   /* margin: 5px; */
    transform: rotate(45deg);
 }
-/* main{
-  display: grid;
-  grid-template-columns: 350px 1fr;
-} */
+
 h1{
   margin: 64px 0px 16px 0px;
 }
 h1, h2{
-  font-size: 3.75rem;
+  font-size: 2rem;
   font-weight: normal;
   color: var(--gray60);
 }
@@ -182,17 +157,14 @@ h2:first-of-type{
 }
 h2{
   font-size: 2rem;
-  /* margin-bottom: 40px; */
   margin: 64px 0 40px;
   color: var(--gray60);
   font-weight: normal;
 }
 
 h3{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: normal;
-  margin-top: 16px;
-  margin-bottom: 24px;
   position: sticky;
   top: 0;
   background-color: white;
@@ -226,6 +198,7 @@ pre{
   line-height: 24px;
   margin-top: 16px;
   margin-bottom: 40px;
+  overflow: scroll;
 }
 .section-content + hr {
   display: none;
@@ -239,7 +212,6 @@ pre{
 }
 .section-content h3{
   counter-increment: titleList;
-  /* padding-bottom: 4px; */
   padding-bottom: 8px;
 }
 .section-content {
@@ -260,7 +232,6 @@ pre{
   position: absolute;
   left: 0;
   bottom: 0;
-  /* margin-top: 4px; */
 }
 
 .section-content ol li{
@@ -269,6 +240,15 @@ pre{
 .section-content ul li{
   margin-top: 16px;
 
+}
+
+section:first-of-type p{
+  margin: 0;
+}
+section:first-of-type img{
+  width: 48px;
+  margin-top: 40px;
+  margin-bottom: 16px;
 }
 
 header input:hover{
@@ -338,11 +318,11 @@ scroll-container{
 }
 
 .form{
-  margin-bottom: 113px;
+  margin-bottom: 40px;
 }
 
 .form input{
-  border: 1px solid black;
+  border: 1px solid var(--gray30);
   box-sizing: border-box;
   border-radius: 8px;
   block-size: 48px;
@@ -351,30 +331,53 @@ scroll-container{
   inline-size: 100%;
   padding-block: 12px;
   padding-inline: 16px;
-  margin-block: 24px;
+  margin-block-start: 16px;
   background-color: transparent;
   width: 280px;
   border-radius: 90px;
-  /* color: white   ; */
 }
 
 .form input::-webkit-input-placeholder{
   color: var(--black);
 }
+.form .email{
+  display: inline-block;
+  margin-left: 16px;
+  width: 100%;
+}
+
+form .email-container{
+  position: relative;
+
+}
 
 .form input[type="submit"]{
   background-color: var(--black);
   color: var(--white);
-  border: 1px solid red;
   position: absolute;
   inset-inline-end: 840px;
   width: 100px;
   text-align: center;
   padding: 0;
+  right: 0;
+}
+
+.form .email{
+  margin-left: 0;
+}
+
+.form .email-container{
+  width: 100%;
+}
+
+.form input[type="text"]{
+  width: 100%;
+}
+.form input[type="email"]{
+  width: 100%;
 }
 
 .form p{
-  /* color: var(--white); */
   margin: 0;
 }
 
@@ -385,12 +388,16 @@ scroll-container{
   line-height: 32.74px;
 }
 
+
+
 .section-content:last-child{
   margin: 0;
 }
 
 
 footer h2{
+  text-align: center;
+  font-size: 1.5rem;
   line-height: 43.65px;
   margin:0;
   color: var(--white);
@@ -416,4 +423,63 @@ footer h2{
   font-size: 18px;
   margin-left: 22px;
   color: white;
+}
+
+@media screen and (min-width: 1400px) {
+  h1{
+    font-size: 3.75rem;
+  }
+
+  header {
+    width: 188px;
+  }
+
+  .header-content div.project-variants{
+    margin-bottom: 104px;
+  }
+
+  h3{
+    font-size: 1.5rem;
+  }
+
+  .form > input{
+    display: inline;
+  }
+
+  .form .email{
+    width: 337px;
+    display: inline-block;
+    margin: 0;
+  }
+  .form input[type="text"]{
+    width: 280px;
+  }
+
+
+}
+
+@media screen and (min-width: 640px) {
+  .email{
+    display: inline-block;
+  }
+
+  .form{
+    margin-bottom: 113px;
+  }
+
+  .form > input{
+    display: inline;
+  }
+
+  .form .email{
+    width: 300px;
+    margin-left: 16px;
+  }
+  .form input[type="text"]{
+    width: 280px;
+  }
+
+  footer h2{
+    font-size: 2rem;
+  }
 }
